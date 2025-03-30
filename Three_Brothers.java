@@ -5,7 +5,7 @@ import static java.lang.System.out;
 import java.util.*;
 import java.io.*;
 import java.math.*;
-public class Main {
+public class Three_Brothers {
     public static void main(String[] args) throws IOException {
         FastReader in = new FastReader();
         FastWriter out = new FastWriter();

@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-public class Main {
+public class New_Game_2025C {
     public static void main(String[] args) throws IOException {
         FastReader in = new FastReader();
         FastWriter out = new FastWriter();

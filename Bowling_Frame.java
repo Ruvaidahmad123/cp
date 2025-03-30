@@ -6,7 +6,7 @@ import java.util.*;
 import java.io.*;
 import java.math.*;
 
-public class Main {
+public class Bowling_Frame {
     public static boolean check(long mid, long w, long b){
         return (long)(mid*mid+mid)<=(long)2*(w+b);
     }

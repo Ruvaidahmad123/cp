@@ -1,5 +1,5 @@
 import java.util.*;
-public class Main{
+public class Prepend_and_Append{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();

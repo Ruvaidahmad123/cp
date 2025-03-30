@@ -2,7 +2,7 @@ import static java.lang.Math.max;
 import java.util.*;
 import java.io.*;
 
-public class Main {
+public class Lazy_NarekCodeforcesDiv2Round972 {
     static final String s = "narek";
     public static void main(String[] args) throws IOException {
         FastReader in = new FastReader();

@@ -1,5 +1,5 @@
 import java.util.*;
-public class Walking_Maste{
+public class Walking_Master{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();

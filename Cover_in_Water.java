@@ -1,5 +1,5 @@
 import java.util.*;
-public class Main
+public class Cover_in_Water
 {
     public static int getAns(String row){
         int count=0;

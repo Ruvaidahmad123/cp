@@ -5,7 +5,7 @@ import java.util.*;
 import java.io.*;
 import java.math.*;
 
-public class Main {
+public class Digital_String_maximization {
     public static void swap(int i, int j, StringBuilder s) {
         char t = s.charAt(i);
         s.setCharAt(i, s.charAt(j));

@@ -1,5 +1,5 @@
 import java.util.*;
-public class Halloumi_Boxes
+public class HalloumiBoxes
 {
     public static boolean isSorted(int arr[]){
         for(int i=0;i<arr.length-1;i++){

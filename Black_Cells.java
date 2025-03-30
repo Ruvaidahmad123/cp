@@ -1,6 +1,6 @@
 import java.util.*;
 import java.io.*;
-public class Main {
+public class Black_Cells {
     public static boolean check(long k, long[] arr, int n) {
         int cnt = 0;
         for (int i = 0; i < n; i++) {
