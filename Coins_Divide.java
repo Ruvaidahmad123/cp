@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Coins {
+public class Coins_Divide {
     static class Scanner {
         BufferedReader br;
         StringTokenizer st;
