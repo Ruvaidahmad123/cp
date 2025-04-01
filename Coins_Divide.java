@@ -74,7 +74,7 @@ public class Coins {
             prefixSum[i] = prefixSum[i - 1] + coins[i];
         }
 
-        for (int x = 1; x <= 100000; x++) {
+        for (int x= 1; x <= 100000; x++) {
             if (solve(x, coins, prefixSum)) {
                 System.out.println("YES");
                 return;
