@@ -13,9 +13,9 @@ public class Yogurt_Sale {
             if (b >= 2 * a) {
                 System.out.println(n * a);
             } else {
-                int x = n % 2;
+                int x1 = n % 2;
                 n = n / 2;
-                System.out.println(n * b + x * a);
+                System.out.println(n * b + x1 * a);
             }
         }
 
