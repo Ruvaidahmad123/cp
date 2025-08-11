@@ -59,7 +59,6 @@ class Pair implements Comparable<Pair> {
         this.first = first;
         this.second = second;
     }
-    @Override
     public int compareTo(Pair o) {
         return Integer.compare(this.first, o.first);
     }
