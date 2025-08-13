@@ -15,14 +15,14 @@ public class Alternating_Series {
     }
 
     static void run() {
-        String s = sc.next();
-        char[] c = s.toCharArray();
-        Arrays.sort(c); // ascending
-        StringBuilder res = new StringBuilder(s.length());
-        for (int i = c.length - 1; i >= 0; i--) {
-            res.append(c[i]); // append in reverse for descending order
+        int n = sc.nextInt();
+        int n_t = n; if(n_t%2 == 0)n_t--;
+        for( int i = 0 ;i < n_t ;i++) {
+        	if(i%2 == 0)out.print(-1 + " ");
+        	else out.print(3 +" ");
         }
-        out.println(res);
+        if(n%2==0)out.print(2);
+        out.println();
     }
 
     // ======================= Utility Classes & Methods =======================
