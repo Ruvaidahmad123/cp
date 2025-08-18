@@ -1,18 +1,18 @@
 **1. Introduction**
 
-**MSB = Most Significant Bit**
+MSB = Most Significant Bit
 
 
 
-**Representation depends on MSB:**
+Representation depends on MSB:
 
 
 
-**If MSB = 0 → number is positive, interpret normally.**
+If MSB = 0 → number is positive, interpret normally.
 
 
 
-**If MSB = 1 → number is negative, apply 2’s complement and prefix -.**
+If MSB = 1 → number is negative, apply 2’s complement and prefix -.
 
 
 
@@ -20,17 +20,17 @@
 
 
 
-**Take 1’s complement (toggle all bits).**
+Take 1’s complement (toggle all bits).
 
-**Add 1 to the result.**
+Add 1 to the result.
 
-**Prefix with negative sign.**
+Prefix with negative sign.
 
 
 
 **Range of n-bit signed integer:**
 
-**−2^(n−1) to 2^(n−1) − 1**
+−2^(n−1) to 2^(n−1) − 1
 
 
 
@@ -38,45 +38,45 @@
 
 **Binary   Decimal**
 
-**0000     0**
+0000     0
 
-**0001     1**
+0001     1
 
-**0010     2**
+0010     2
 
-**0011     3**
+0011     3
 
-**0100     4**
+0100     4
 
-**0101     5**
+0101     5
 
-**0110     6**
+0110     6
 
-**0111     7**
+0111     7
 
-**1000     -8**
+1000     -8
 
-**1001     -7**
+1001     -7
 
-**1010     -6**
+1010     -6
 
-**1011     -5**
+1011     -5
 
-**1100     -4**
+1100     -4
 
-**1101     -3**
+1101     -3
 
-**1110     -2**
+1110     -2
 
-**1111     -1**
+1111     -1
 
 
 
 **📌 Example:**
 
-**1000 → take 2’s complement → 1000 → 8 → stored as -8.**
+1000 → take 2’s complement → 1000 → 8 → stored as -8.
 
-**If DATA\_TYPE a = 12; → stored as 1100 → prints -4 instead of 12.**
+If DATA\_TYPE a = 12; → stored as 1100 → prints -4 instead of 12.
 
 
 
@@ -88,33 +88,33 @@
 
 **Positive Numbers:**
 
-**Convert to binary.**
+Convert to binary.
 
-**Fit into the given bit-width (truncate extra bits).**
+Fit into the given bit-width (truncate extra bits).
 
 
 
 **Negative Numbers:**
 
-**Ignore the sign.**
+Ignore the sign.
 
-**Convert absolute value to binary.**
+Convert absolute value to binary.
 
-**Fit into the bit-width.**
+Fit into the bit-width.
 
-**Store 2’s complement of that value.**
+Store 2’s complement of that value.
 
 
 
 **📌 Example: -7 (4-bit)**
 
-**Step 1: Ignore sign → 7**
+**Step 1:** Ignore sign → 7
 
-**Step 2: Binary → 0111**
+**Step 2:** Binary → 0111
 
-**Step 3: 2’s complement → 1001**
+**Step 3:** 2’s complement → 1001
 
-**Stored as 1001.**
+Stored as 1001.
 
 
 
@@ -122,19 +122,19 @@
 
 **Operator    Symbol   Example**
 
-**OR          |        a | b**
+OR          |        a | b
 
-**AND         \&        a \& b**
+AND         \&        a \& b
 
-**XOR         ^        a ^ b**
+XOR         ^        a ^ b
 
-**NOT         ~        ~a**
+NOT         ~        ~a
 
-**Left Shift  <<       a << k**
+Left Shift  <<       a << k
 
-**Right Shift >>       a >> k**
+Right Shift >>       a >> k
 
-**Unsigned RS >>>      a >>> k**
+Unsigned RS >>>      a >>> k
 
 
 
@@ -172,7 +172,7 @@
 
 **Right Shift (>>)**
 
-**Example: 10100110 >> 3 = 11110100**
+**Example: 10100110 >> 3 = 11110100 (inserts MSB from left side)**
 
 
 
@@ -234,35 +234,35 @@
 
 **5. Sample Code (Java)**
 
-**int n = in.nextInt();   // number**
+int n = in.nextInt();   // number
 
-**int i = in.nextInt();   // set ith bit**
+int i = in.nextInt();   // set ith bit
 
-**int j = in.nextInt();   // unset jth bit**
+int j = in.nextInt();   // unset jth bit
 
-**int k = in.nextInt();   // toggle kth bit**
+int k = in.nextInt();   // toggle kth bit
 
-**int m = in.nextInt();   // check mth bit**
-
-
-
-**int onmask     = (1 << i);**
-
-**int offmask    = ~(1 << j);**
-
-**int togglemask = (1 << k);**
-
-**int checkmask  = (1 << m);**
+int m = in.nextInt();   // check mth bit
 
 
 
-**out.println("After setting ith bit: " + (n | onmask));**
+int onmask     = (1 << i);
 
-**out.println("After unsetting jth bit: " + (n \& offmask));**
+int offmask    = ~(1 << j);
 
-**out.println("After toggling kth bit: " + (n ^ togglemask));**
+int togglemask = (1 << k);
 
-**out.println("mth bit is on: " + ((n \& checkmask) == 0 ? "false" : "true"));**
+int checkmask  = (1 << m);
+
+
+
+out.println("After setting ith bit: " + (n | onmask));
+
+out.println("After unsetting jth bit: " + (n \& offmask));
+
+out.println("After toggling kth bit: " + (n ^ togglemask));
+
+out.println("mth bit is on: " + ((n \& checkmask) == 0 ? "false" : "true"));
 
 
 
