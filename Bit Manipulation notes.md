@@ -266,3 +266,82 @@ out.println("mth bit is on: " + ((n \& checkmask) == 0 ? "false" : "true"));
 
 
 
+**6.** **Right Most Set Bit in a number**
+
+let's just say x= A1's\&0's..1..B0's
+
+
+rsb(right set bit)= x \& x''(2's compliment of x) 
+                         x= A1's \& 0's.....1.....B0's
+
+&nbsp;			 ~x=A0's \& 1's.....0.....B1's
+
+&nbsp;		    x''=~x+1=A0's\& 1's.....1.....B0's
+
+&nbsp;                  x\&x''=   A0's...........1.....B0's
+
+**n  =  12   →  1100 (binary)**
+
+**-n = -12   →  0100 (binary, in two’s complement 4 bits)**
+
+
+
+**n \& -n = 1100 \& 0100 = 0100         (*n \& -n → gives you the value of the lowest set bit of n*)**
+
+**So result = 4, which corresponds to the rightmost set bit at position 3 (0-indexed from right).**
+
+	    **//number**
+
+            **int n = in.nextInt();**
+
+            **int right\_most\_set\_bit= n\&-n; // n\& -n**
+
+            **out.println("right most set bit: "+right\_most\_set\_bit);**
+
+
+
+
+
+**7. Kernighan's Algorithm:** used to count number of set bits in a number.
+
+Brute: check each and every bit using check mask and increment the count like we did previously.  increase count only if (n\&checkmask)==0.
+
+n=10101
+
+**Optimal: me move only rmsb.**
+
+step 1: calculate rmsb    rmsb= 00001
+step 2: increment the count   1------>will finally become 3
+
+step 3: remove rmsb from the number.  10101-00001=10100
+
+step 4: repeat until number becomes 0.  n=10100
+
+
+
+&nbsp;	    //number
+
+ **Code:**      int n = in.nextInt();
+
+&nbsp;           int count\_of\_set\_bits=0;
+
+&nbsp;           while(n!=0){
+
+&nbsp;               int rmsb=n \& -n;
+
+&nbsp;               count\_of\_set\_bits++;
+
+&nbsp;               n=n-rmsb;
+
+&nbsp;           }
+
+&nbsp;           out.println(count\_of\_set\_bits);
+
+
+
+**8.** 
+
+
+
+
+
