@@ -339,9 +339,87 @@ step 4: repeat until number becomes 0.  n=10100
 
 
 
-**8.** 
+**8. Josephus Problem:** if there are numbers from 1 to n, and you delete adjacent numbers..what would be the last number which will be left. consider your series is circular . n=2^x+l . The last remaining number would be 2l+1.
 
 
 
+public int largestpowerof2(int n){
 
+&nbsp;	int i=1;
+
+&nbsp;	while(i<=n){
+
+&nbsp;	   i=i\*2;
+
+&nbsp;	}
+
+&nbsp;	return i;
+
+}
+
+psvm(){
+
+&nbsp;	int n=sc.nextInt();
+
+&nbsp;	int highest\_powerof2=largestpowerof2(n);
+
+&nbsp;	int l=n-highest\_powerof2;
+
+&nbsp;	sop(2\*l+1);
+
+}
+
+
+why this logic holds?
+  1 = 0001
+
+&nbsp; 2 = 0010
+
+&nbsp; 3 = 0011
+
+&nbsp; 4 = 0100
+
+&nbsp; 5 = 0101                                                      
+
+&nbsp; 6 = 0110
+
+&nbsp; 7 = 0111
+
+&nbsp; 8 = 1000
+
+&nbsp; 9 = 1001
+
+&nbsp;10 = 1010 = 1000 + 0010(l)  
+
+&nbsp;                  => 2\*l(add 0 at end) =0100 => 0101=5  
+
+
+
+@ in first round all those get killed whose last bit is 0(i.e even numbers)
+
+@ last me jo mara uski second last bit decide karegi ki agli baar ke round me kon marega 1010(last one to get killed in first round) second last bit is 1 , now all those will get killed whose second last bit is 1. so now 1(0001) bach jayega and three (0011) mar jayega
+
+
+
+**Start: \[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]**
+
+**Kill 2 → \[1, 3, 4, 5, 6, 7, 8, 9, 10]**
+
+**Kill 4 → \[1, 3, 5, 6, 7, 8, 9, 10]**
+
+**Kill 6 → \[1, 3, 5, 7, 8, 9, 10]**
+
+**Kill 8 → \[1, 3, 5, 7, 9, 10]**
+
+**Kill 10 → \[1, 3, 5, 7, 9]**  
+
+**(Loop back to start)**
+
+**Kill 3 → \[1, 5, 7, 9]**
+
+**Kill 7 → \[1, 5, 9]**
+
+**Kill 1 → \[5, 9]**
+
+**Kill 9 → \[5]**
 
