@@ -421,5 +421,5 @@ why this logic holds?
 
 **Kill 1 → \[5, 9]**
 
-**Kill 9 → \[5]**
+**Kill 9 → \[5].**
 
